@@ -1,0 +1,16 @@
+<% include ../layout/header %>
+
+<div class="container">
+    <h1 class="text-center my-5">Add a new comment to <%= campground.name %></h1>
+
+    <div class="w-50 mx-auto">
+        <form action="/campgrounds/<%= campground._id %>/comments" method="post">
+            <div class="form-group">
+                <textarea class="form-control" name="comment[text]" placeholder="Your comment"></textarea>
+            </div>
+            <button class="btn btn-lg btn-block btn-primary" type="submit">Submit</button>
+        </form>
+    </div>
+</div>
+
+<% include ../layout/footer %>

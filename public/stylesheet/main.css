@@ -1,0 +1,16 @@
+.side {
+    left: 0px;
+    top: 5em;
+}
+
+.carousel-item {
+    height: 100vh;
+    min-height: 400px;
+    background: no-repeat center center scroll;
+    background-size: cover;
+}
+
+.landingTypo {
+    color: #fff;
+    padding-top: 40vh;
+}

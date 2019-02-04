@@ -1,0 +1,25 @@
+<% include ../layout/header %>
+
+<div class="container">
+    <h1 class="text-center my-5">Edit <%= campground.name %></h1>
+
+    <div class="w-50 mx-auto">
+        <form action="/campgrounds/<%= campground._id %>?_method=PUT" method="post">
+            <div class="form-group">
+                <input class="form-control" type="text" name="campground[name]" placeholder="Name" value="<%= campground.name %>">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="number" name="campground[price]" placeholder="Price" value="<%= campground.price %>" step="0.01" min="0.01">
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="url" name="campground[image]" placeholder="Image url" value="<%= campground.image %>">
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" name="campground[description]" placeholder="Type the description"><%- campground.description %></textarea>
+            </div>
+            <button class="btn btn-lg btn-block btn-primary" type="submit">Edit</button>
+        </form>
+    </div>
+</div>
+
+<% include ../layout/footer %>
