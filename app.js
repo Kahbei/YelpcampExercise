@@ -14,11 +14,9 @@ const indexRoutes = require("./routes/index");
 
 const app = express();
 const port = process.env.PORT || 3000;
+const database = process.env.DATABASEURL || "mongodb://localhost:27017/yelpcamp";
 
-const devDB = "mongodb://localhost:27017/yelpcamp";
-const mLabDB = "mongodb://Khabe:l33t_h4x0r@ds221645.mlab.com:21645/yelpcamp";
-
-mongoose.connect(mLabDB, { useNewUrlParser: true, useFindAndModify: false });
+mongoose.connect(database, { useNewUrlParser: true, useFindAndModify: false });
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
