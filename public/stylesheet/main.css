@@ -14,3 +14,7 @@
     color: #fff;
     padding-top: 40vh;
 }
+
+p {
+    white-space: pre-wrap;
+}
